@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/amey/IdeaProjects/APIAutomationATB9x">
-        <classes>
-            <class name="com.thetestingacademy.ex002_RestAssuredBasics.GET.APITesting007_GET_TestNG">
-
-            </class>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/amey/IdeaProjects/APIAutomationATB9x/src/test/java/com/thetestingacademy/ex002_RestAssuredBasics/GET/Task_12122024/GET_NonBDD_TestNG.java"><classes><class name="com.thetestingacademy.ex002_RestAssuredBasics.GET.Task_12122024.GET_NonBDD_TestNG"><methods><include name="test_GET_NonBDD_Postive"/><include name="test_GET_NonBDD_Negative"/><include name="test_GET_NonBDD_Negative_longNo"/><include name="test_GET_NonBDD_Negative_special"/><include name="test_GET_NonBDD_Negative_blank"/><include name="test_GET_NonBDD_Negative_null"/><include name="test_GET_NonBDD_Negative_space"/><include name="test_GET_NonBDD_Negative_characters"/><include name="test_GET_NonBDD_Negative_spaceInNo"/><include name="test_GET_NonBDD_Negative_noTooShort"/><include name="test_GET_NonBDD_Negative_spaceBeforeNo"/><include name="test_GET_NonBDD_Negative_spaceAfterNo"/><include name="test_GET_NonBDD_Negative_decimalInNo"/><include name="test_GET_NonBDD_Negative_hypenInNo"/></methods></class></classes></test></suite>
