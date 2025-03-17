@@ -33,10 +33,10 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative() {
 
-        String pincode = "-1";
+        String pincode1 = "-1";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode1);
         response = r.when().get(); //http methods
         vr = response.then();
         vr.log().all().statusCode(404);
@@ -45,10 +45,10 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative_longNo() {
 
-        String pincode = "4000000000000";
+        String pincode2 = "4000000000000";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode2);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
@@ -57,10 +57,10 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative_special() {
 
-        String pincode = "@@777hhhhh";
+        String pincode3 = "@@777hhhhh";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode3);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
@@ -69,10 +69,10 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative_blank() {
 
-        String pincode = "";
+        String pincode4 = "";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode4);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
@@ -81,10 +81,10 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative_null() {
 
-        String pincode = null;
+        String pincode5 = null;
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode5);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
@@ -93,10 +93,10 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative_space() {
 
-        String pincode = " ";
+        String pincode6 = " ";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode6);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
@@ -105,10 +105,10 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative_characters() {
 
-        String pincode = "abcdefg";
+        String pincode7 = "abcdefg";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode7);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
@@ -117,25 +117,72 @@ public class APITesting008_GET_NonBDD_TestNG {
     @Test
     public void test_GET_NonBDD_Negative_spaceInNo() {
 
-        String pincode = "56 00 16";
+        String pincode8 = "56 00 16";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode8);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
     }
-    @Description("Verify the GET Request with Negative data: boolean")
+    @Description("Verify the GET Request with Negative data: no too short")
     @Test
-    public void test_GET_NonBDD_Negative_boolean() {
+    public void test_GET_NonBDD_Negative_noTooShort() {
 
-        Boolean pincode = true;
+        String pincode8 = "5600";
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
-        r.basePath("/IN/" + pincode);
+        r.basePath("/IN/" + pincode8);
         response = r.when().get(); //http methods
         vr = response.then()
                 .log().all().statusCode(404);
     }
+    @Description("Verify the GET Request with Negative data: space before no")
+    @Test
+    public void test_GET_NonBDD_Negative_spaceBeforeNo() {
 
+        String pincode8 = " 560016";
+        r = RestAssured.given();
+        r.baseUri("https://api.zippopotam.us");
+        r.basePath("/IN/" + pincode8);
+        response = r.when().get(); //http methods
+        vr = response.then()
+                .log().all().statusCode(404);
+    }
+    @Description("Verify the GET Request with Negative data: space after no")
+    @Test
+    public void test_GET_NonBDD_Negative_spaceAfterNo() {
+
+        String pincode8 = "560016 ";
+        r = RestAssured.given();
+        r.baseUri("https://api.zippopotam.us");
+        r.basePath("/IN/" + pincode8);
+        response = r.when().get(); //http methods
+        vr = response.then()
+                .log().all().statusCode(404);
+    }
+    @Description("Verify the GET Request with Negative data: decimal in no")
+    @Test
+    public void test_GET_NonBDD_Negative_decimalInNo() {
+
+        String pincode8 = "560.016";
+        r = RestAssured.given();
+        r.baseUri("https://api.zippopotam.us");
+        r.basePath("/IN/" + pincode8);
+        response = r.when().get(); //http methods
+        vr = response.then()
+                .log().all().statusCode(404);
+    }
+    @Description("Verify the GET Request with Negative data: hyphen in no")
+    @Test
+    public void test_GET_NonBDD_Negative_hypenInNo() {
+
+        String pincode8 = "560-016";
+        r = RestAssured.given();
+        r.baseUri("https://api.zippopotam.us");
+        r.basePath("/IN/" + pincode8);
+        response = r.when().get(); //http methods
+        vr = response.then()
+                .log().all().statusCode(404);
+    }
 }
