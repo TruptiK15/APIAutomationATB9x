@@ -18,9 +18,9 @@ public class APITesting_002 {
         RestAssured
                 .given()
                     .baseUri("https://api.zippopotam.us")
-                    .basePath("/IN/560016").
-                when()
-                    .get()
+                    .basePath("/IN/560016")
+                .when()
+                .get()
                 .then().log().all().statusCode(200);
     }
 }
