@@ -1,17 +1,16 @@
-package com.thetestingacademy.ex004_TestNG_Examples;
+package com.thetestingacademy.ex003_TestNG_Examples;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class APITesting019_TestNG_Enabled {
-
+public class APITesting020_TestNG_AlwaysRun {
 
     @Test
     public void test1() {
         Assert.assertTrue(true);
     }
 
-    @Test(enabled = false)
+    @Test(alwaysRun = true)
     public void test2() {
         Assert.assertTrue(true);
     }

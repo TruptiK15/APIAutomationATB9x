@@ -5,7 +5,7 @@
 
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="com.thetestingacademy.ex004_TestNG_Examples.APITesting018_TestNG_Parameters"/>
+            <class name="com.thetestingacademy.ex003_TestNG_Examples.APITesting018_TestNG_Parameters"/>
         </classes>
     </test>
 </suite>

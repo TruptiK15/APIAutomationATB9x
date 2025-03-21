@@ -1,6 +1,5 @@
-package com.thetestingacademy.ex004_TestNG_Examples;
+package com.thetestingacademy.ex003_TestNG_Examples;
 
-import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
