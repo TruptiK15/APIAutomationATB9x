@@ -8,10 +8,7 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-public class APITesting025_PayLoad_POJO {
+public class APITesting026_PayLoad_POJO {
     RequestSpecification r;
     ValidatableResponse validatableResponse;
 

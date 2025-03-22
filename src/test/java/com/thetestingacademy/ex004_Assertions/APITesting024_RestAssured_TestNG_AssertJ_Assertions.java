@@ -8,7 +8,7 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-//import static org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.*;
 
 public class APITesting024_RestAssured_TestNG_AssertJ_Assertions {
     RequestSpecification r;
@@ -59,6 +59,6 @@ public class APITesting024_RestAssured_TestNG_AssertJ_Assertions {
         Assert.assertEquals(lastname1,"Cate");
 
         //AssertJ Assertion - Lib
-        //assertThat(bookingId).isNotNull().isNotZero().isPositive();
+        assertThat(bookingId).isNotNull().isNotBlank();
     }
 }
